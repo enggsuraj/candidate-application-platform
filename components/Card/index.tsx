@@ -25,8 +25,7 @@ const JobDetailsModal = ({ open, onClose, jobDetails }: any) => {
           bgcolor: "background.paper",
           boxShadow: 24,
           p: 4,
-        }}
-      >
+        }}>
         <Typography variant="h6" component="h2">
           Full Job Details
         </Typography>
@@ -39,8 +38,8 @@ const JobDetailsModal = ({ open, onClose, jobDetails }: any) => {
 
 const index = (props: any) => {
   const { data } = props;
-  const [showFullDetails, setShowFullDetails] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false);
+  const [showFullDetails, setShowFullDetails] = useState<boolean>(false);
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
 
   const toggleDetails = () => {
     setShowFullDetails(!showFullDetails);
@@ -80,8 +79,7 @@ const index = (props: any) => {
               color="#8b8b8b;"
               fontSize="13px"
               fontWeight="600"
-              letterSpacing="1px"
-            >
+              letterSpacing="1px">
               {data.companyName}
             </Typography>
             <Typography fontSize="10px" lineHeight="1.5" variant="button">
@@ -117,8 +115,7 @@ const index = (props: any) => {
           fontSize="14px"
           color="text.secondary"
           gutterBottom
-          letterSpacing="1px"
-        >
+          letterSpacing="1px">
           Minimum Experience
         </Typography>
         <Typography fontSize="14px" gutterBottom letterSpacing="1px">
@@ -128,8 +125,7 @@ const index = (props: any) => {
         <Button className={styles.buttonSecondary}>
           <Avatar
             style={{ transform: "translateX(10px)" }}
-            sx={{ bgcolor: indigo[200], width: 32, height: 32 }}
-          >
+            sx={{ bgcolor: indigo[200], width: 32, height: 32 }}>
             {getRandomLetter()}
           </Avatar>
           <Avatar sx={{ bgcolor: purple[200], width: 32, height: 32 }}>
