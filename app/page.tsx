@@ -1,4 +1,5 @@
 "use client";
+// eslint-disable-next-line react-hooks/exhaustive-deps
 
 import React, { useState, useEffect } from "react";
 import Card from "@/components/Card";
@@ -67,12 +68,12 @@ export default function Home() {
     }
   };
 
-  const applyRoleFilter = (roles: any, type: any) => {
-    if (roles?.length === 0 && !firstCall) {
+  const applyRoleFilter = (val: any, type: any) => {
+    if (val?.length === 0 && !firstCall) {
       setData([]);
       getData(0);
     } else {
-      const filterBy = roles.map((item: any) => item.value);
+      const filterBy = val.map((item: any) => item.value);
       const filteredData = dataInitial.filter((job: any) =>
         filterBy.includes(job[type])
       );
@@ -162,8 +163,7 @@ export default function Home() {
               letterSpacing="1px"
               textAlign="center"
               display="flex"
-              justifyContent="center"
-            >
+              justifyContent="center">
               No Records to display ...
             </Typography>
           </Box>
