@@ -36,7 +36,7 @@ const JobDetailsModal = ({ open, onClose, jobDetails }: any) => {
   );
 };
 
-const index = (props: any) => {
+const CardComponent = (props: any) => {
   const { data } = props;
   const [showFullDetails, setShowFullDetails] = useState<boolean>(false);
   const [modalOpen, setModalOpen] = useState<boolean>(false);
@@ -143,4 +143,4 @@ const index = (props: any) => {
   );
 };
 
-export default index;
+export default CardComponent;
