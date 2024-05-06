@@ -10,7 +10,7 @@ export async function postAPI(url = "", data = {}) {
   try {
     const response = await fetch(url, requestOptions);
     if (!response.ok) {
-      throw new Error("Network response was not ok");
+      throw new Error("Network response was not ok!!");
     }
     return await response.json();
   } catch (error) {
