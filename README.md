@@ -33,6 +33,8 @@ Features Built
 - Search
 - Responsive design
   
-  
+Deployment 
+
+https://candidate-application-platform-eight.vercel.app/
 
 
